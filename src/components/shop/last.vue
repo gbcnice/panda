@@ -1,6 +1,6 @@
 <template>
     <div>
-        我的
+        最后疯抢
     </div>
 </template>
 

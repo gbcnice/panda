@@ -1,6 +1,6 @@
 <template>
     <div>
-        我的
+        品牌特卖
     </div>
 </template>
 

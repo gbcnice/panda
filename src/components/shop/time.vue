@@ -1,6 +1,6 @@
 <template>
     <div>
-        我的
+        限时秒杀
     </div>
 </template>
 

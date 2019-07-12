@@ -1,6 +1,6 @@
 <template>
     <div>
-        我的
+        超市
     </div>
 </template>
 
