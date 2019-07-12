@@ -23,7 +23,7 @@ export default {
            },
     methods:{
         getData(){
-            this.$axios.get("http://localhost:3000/nvzhuang").then((res)=>{
+            this.$axios.get("http://localhost:4000/nvzhuang").then((res)=>{
                 this.list = res.data
                 console.log(res)
             })

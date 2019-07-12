@@ -19,7 +19,10 @@ import Xiangbao from './views/fenlei-luyou/Xiangbao'
 import Xiezi from './views/fenlei-luyou/Xiezi'
 import Yundong from './views/fenlei-luyou/Yundong'
 import Muying from './views/fenlei-luyou/Muying'
-import Xiangqingyemian from './views/fenlei-luyou/Xiangqingyemian'
+
+import Goodplace from './components/shop/goodplace.vue'
+import Goodone from './components/shop/goodone.vue'
+// import Xiangqingyemian from './views/fenlei-luyou/Xiangqingyemian'
 
 Vue.use(Router)
 
@@ -40,7 +43,20 @@ export default new Router({
         {
           path: '/home/shop',
           name: 'shop',
-          component: Shop
+          component: Shop,
+          redirect:{name:'goodplace'},
+          children:[
+            {
+              path: '/home/shop/goodplace',
+              name: 'goodplace',
+              component: Goodplace
+            },
+            {
+              path: '/home/shop/goodone',
+              name: 'goodone',
+              component: Goodone
+            }
+          ]
         },
         {
           path: '/home/my',
@@ -120,13 +136,13 @@ export default new Router({
               path: '/home/fenlei/muying',
               name: 'muying',
               component:Muying,
-              children:[
-                {
-                  path: '/home/fenlei/xiangqingyemian:id',
-                  name: 'xiangqingyemian',
-                  component:Xiangqingyemian
-                }
-              ]
+              // children:[
+              //   {
+              //     path: '/home/fenlei/xiangqingyemian:id',
+              //     name: 'xiangqingyemian',
+              //     component:Xiangqingyemian
+              //   }
+              // ]
             },
             
           ]

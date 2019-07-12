@@ -6,6 +6,20 @@ import axios from 'axios'
 import './assets/iconfont/iconfont.css'
 import './assets/style.css'
 import './assets/flexble.js'
+import MintUI from 'mint-ui'
+import { InfiniteScroll } from 'mint-ui'
+Vue.use(InfiniteScroll)
+import {Indicator} from 'mint-ui'
+import 'mint-ui/lib/style.css'
+Vue.use(MintUI)
+axios.interceptors.request.use((config)=>{
+  Indicator.open();
+  return config;
+})
+axios.interceptors.response.use((res)=>{
+  Indicator.close();
+  return res;
+})
 Vue.prototype.$axios = axios
 
 Vue.config.productionTip = false
